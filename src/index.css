@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --bg: #14100c;
+        --bg-soft: #1f1712;
+        --card: rgba(39, 28, 20, 0.66);
+        --card-strong: rgba(49, 35, 24, 0.9);
+        --line: rgba(255, 194, 140, 0.24);
+        --text: #fff4e8;
+        --muted: #e1c9b4;
+        --cyan: #ffbd7f;
+        --mint: #ffc290;
+        --amber: #ffdaa8;
+        --glass-card: rgba(38, 28, 20, 0.34);
+        --cursor-x: 50vw;
+        --cursor-y: 50vh;
+    }
+
+    body[data-theme="light"] {
+        --bg: #ffffff;
+        --bg-soft: #fffdfa;
+        --card: rgba(255, 255, 255, 0.85);
+        --card-strong: #ffffff;
+        --line: rgba(70, 40, 20, 0.1);
+        --text: #050505;
+        --muted: #554433;
+        --cyan: #e67e22;
+        --mint: #ffc290;
+        --amber: #ff7f50;
+        --glass-card: rgba(255, 255, 255, 0.75);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--text);
+    }
+}
+
+@layer components {
+    .cursor-glow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40px;
+        /* Base size */
+        height: 40px;
+        /* Base size */
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: screen;
+        transform: translate(calc(var(--cursor-x) - 50%), calc(var(--cursor-y) - 50%));
+        transition: width 0.3s, height 0.3s, opacity 0.3s;
+
+        /* The glow effect */
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.6;
+        }
+    }
+
+    body[data-theme="light"] .cursor-glow {
+        mix-blend-mode: normal;
+    }
+
+    body[data-theme="light"] .cursor-glow::after {
+        background: radial-gradient(circle, rgba(255, 160, 100, 0.15), transparent 70%);
+    }
+}
+
+@layer utilities {
+    .scrollbar-none {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scrollbar-none::-webkit-scrollbar {
+        display: none;
+    }
+}
