@@ -3,7 +3,7 @@ import { memo, useState } from "react";
 import { Link } from "react-router-dom";
 import { certifications, awsEducateBadges, CREDLY_URL } from "../data/portfolio";
 
-type Category = "all" | "linux" | "cloud" | "devops" | "security" | "database" | "os";
+type Category = "all" | "linux" | "cloud" | "devops" | "security" | "database" | "os" | "ai";
 
 const CATEGORY_LABELS: Record<Category, string> = {
     all: "All",
@@ -13,6 +13,7 @@ const CATEGORY_LABELS: Record<Category, string> = {
     security: "Security",
     database: "Database",
     os: "OS",
+    ai: "AI",
 };
 
 const CertificationsSection = memo(function CertificationsSection() {
@@ -94,6 +95,25 @@ const CertificationsSection = memo(function CertificationsSection() {
                                             alt={`${cert.issuer} logo`}
                                             className="w-full h-full object-contain"
                                             loading="lazy"
+                                            onError={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                // Fallback chain: try clearbit, then show initials
+                                                const domain = cert.issuer
+                                                    .toLowerCase()
+                                                    .replace(/[^a-z0-9]/g, "")
+                                                    .replace("infosysfoundation", "infosys")
+                                                    .replace("ictacademy", "ictak")
+                                                    + ".com";
+                                                if (!target.src.includes("clearbit")) {
+                                                    target.src = `https://logo.clearbit.com/${domain}`;
+                                                } else {
+                                                    target.style.display = "none";
+                                                    const parent = target.parentElement;
+                                                    if (parent) {
+                                                        parent.innerHTML = `<span style="font-size:1.1rem;font-weight:800;color:#007CC2;letter-spacing:-1px">${cert.issuer.split(" ").map((w: string) => w[0]).join("").slice(0,3)}</span>`;
+                                                    }
+                                                }
+                                            }}
                                         />
                                     ) : (
                                         /* Award medal SVG – no emoji */

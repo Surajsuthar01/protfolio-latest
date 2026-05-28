@@ -148,15 +148,15 @@ const EducationSection = memo(function EducationSection() {
               <div className="flex flex-wrap justify-center gap-3 mt-5">
                 <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[rgba(255,189,127,0.3)] bg-[rgba(255,189,127,0.06)] text-[0.78rem] font-bold text-[#ffbd7f]">
                   <StarIcon />
-                  CGPA 8.6 / 10
+                  CGPA 8.8 / 10
                 </div>
                 <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[rgba(129,140,248,0.3)] bg-[rgba(129,140,248,0.06)] text-[0.78rem] font-bold text-[#818cf8]">
                   <CalendarIcon />
-                  2020 – Present
+                  2020 – 2026
                 </div>
                 <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[rgba(34,197,94,0.3)] bg-[rgba(34,197,94,0.06)] text-[0.78rem] font-bold text-[#22c55e]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse" />
-                  Currently Enrolled
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e]" />
+                  Graduated 2026
                 </div>
               </div>
             </div>
@@ -259,10 +259,10 @@ const EducationSection = memo(function EducationSection() {
                         {item.id === "btech" && (
                           <div className="mb-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
                             {[
-                              { label: "CGPA", value: "8.6", sub: "out of 10" },
-                              { label: "Year", value: "3rd", sub: "of 4" },
+                              { label: "CGPA", value: "8.8", sub: "out of 10" },
+                              { label: "Batch", value: "2026", sub: "Graduated" },
                               { label: "Projects", value: "5+", sub: "completed" },
-                              { label: "Certs", value: "6+", sub: "earned" },
+                              { label: "Certs", value: "7+", sub: "earned" },
                             ].map((stat) => (
                               <div
                                 key={stat.label}
@@ -310,7 +310,7 @@ const EducationSection = memo(function EducationSection() {
                 <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#22c55e]" fill="currentColor">
                   <path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm-1-14h2v6h-2zm0 8h2v2h-2z" />
                 </svg>
-                All academic records from Rajasthan Board of Secondary Education &amp; RTU, Jaipur
+                All academic records from Rajasthan Board of Secondary Education &amp; RTU | Now based in Pune, Maharashtra
               </p>
             </div>
           </div>

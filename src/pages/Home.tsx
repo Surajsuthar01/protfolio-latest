@@ -34,6 +34,7 @@ import {
 function Home() {
     const [emailCopied, setEmailCopied] = useState<boolean>(false);
 
+
     // Router hooks for navigation tracking
     const location = useLocation();
 
@@ -93,171 +94,116 @@ function Home() {
             ═══════════════════════════════════════════════ */}
             <section id="leetcode" className="py-20 lg:py-24">
                 <div className="w-[min(1400px,88vw)] mx-auto">
-                    <div className="p-8 md:p-12 rounded-[1.5rem] w-full flex flex-col items-center relative border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
+                    <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
 
-                        {/* Gradient accent border – LeetCode amber/orange theme */}
-                        <div className="absolute top-0 left-0 right-0 h-[3px] bg-[linear-gradient(90deg,#FFA116,#ffbd7f,#00b8a3,#FFA116)] opacity-75 pointer-events-none" />
+                        {/* Accent bar */}
+                        <div className="h-[3px] w-full bg-[linear-gradient(90deg,#FFA116,#ffbd7f,#00b8a3,#FFA116)] opacity-70" />
 
-                        {/* Section Header */}
-                        <div className="mb-10 text-center max-w-[800px] mx-auto w-full">
-                            <p className="text-cyan text-[0.8rem] tracking-[0.12em] uppercase font-bold mb-3">LeetCode</p>
-                            <h2 className="font-display text-[clamp(1.45rem,3vw,2.35rem)] font-extrabold m-0 leading-[1.2] mb-2">
-                                Consistent problem-solving & DSA practice
-                            </h2>
-                            <p className="text-muted text-[0.92rem] mt-2">
-                                Solving problems daily to sharpen algorithmic thinking and coding speed.
-                                Profile: <span className="text-cyan font-semibold">@{LEETCODE_USERNAME}</span>
-                            </p>
-                        </div>
+                        <div className="p-6 md:p-10">
 
-                        {/* ── Stat Tiles ── */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full mb-8">
-                            {[
-                                {
-                                    label: "Problems Solved", value: "280+",
-                                    color: "rgba(255,153,0,0.15)", border: "rgba(255,153,0,0.3)", text: "#FF9900",
-                                    icon: (
-                                        <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none" stroke="#FF9900" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                    ),
-                                },
-                                {
-                                    label: "Global Ranking", value: "Top 30%",
-                                    color: "rgba(34,197,94,0.1)", border: "rgba(34,197,94,0.3)", text: "#22c55e",
-                                    icon: (
-                                        <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none" stroke="#22c55e" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                                        </svg>
-                                    ),
-                                },
-                                {
-                                    label: "Acceptance Rate", value: "~65%",
-                                    color: "rgba(99,102,241,0.1)", border: "rgba(99,102,241,0.3)", text: "#818cf8",
-                                    icon: (
-                                        <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none" stroke="#818cf8" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <circle cx="12" cy="12" r="6" />
-                                            <circle cx="12" cy="12" r="2" fill="#818cf8" />
-                                        </svg>
-                                    ),
-                                },
-                            ].map((stat) => (
-                                <div
-                                    key={stat.label}
-                                    className="flex items-center gap-4 p-5 rounded-2xl border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]"
-                                    style={{ background: stat.color, borderColor: stat.border }}
-                                >
-                                    <span className="leading-none flex-shrink-0">{stat.icon}</span>
-                                    <div>
-                                        <p className="text-[0.72rem] text-muted uppercase tracking-wider font-bold mb-0.5">{stat.label}</p>
-                                        <p className="text-[1.4rem] font-extrabold leading-none" style={{ color: stat.text }}>{stat.value}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* ── Main Card ── */}
-                        <div className="flex flex-col lg:flex-row gap-8 items-start p-8 rounded-2xl relative border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl w-full transition-all duration-500 hover:border-[rgba(255,193,132,0.42)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.28)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))] light:hover:border-[#ffb74d] light:hover:shadow-[0_16px_32px_rgba(255,167,38,0.15)] overflow-hidden group">
-
-                            {/* Yellow accent line */}
-                            <div className="absolute top-0 left-0 right-0 h-[2px] bg-[linear-gradient(90deg,#FFA116,#ffbd7f,#FFA116)] opacity-70" />
-
-                            {/* Left: content */}
-                            <div className="flex-1 min-w-0">
-                                <div className="flex items-center gap-2 mb-3">
-                                    {/* LeetCode icon */}
-                                    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="#FFA116">
-                                        <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.187.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.186c-.38-.375-.57-.5-.64-.61a2.067 2.067 0 0 1-.46-.955 2.26 2.26 0 0 1 .09-1.07 2.094 2.094 0 0 1 .491-.815l4.919-5.271 4.899-5.271a3.037 3.037 0 0 1 4.204-.077l.02.018 2.396 2.392a1.378 1.378 0 0 0 1.951-.003c.537-.54.537-1.414 0-1.955l-2.396-2.392c-1.087-1.087-2.574-1.643-4.105-1.56a5.323 5.323 0 0 0-3.956 1.638zm-5.604 0a1.374 1.374 0 0 0-.96.438L.516 6.672a1.378 1.378 0 0 0 .003 1.955 1.378 1.378 0 0 0 1.951.003L8.873 2.39a1.38 1.38 0 0 0 0-1.952A1.374 1.374 0 0 0 7.879 0z" />
-                                    </svg>
-                                    <h3 className="text-[1.2rem] font-bold">Coding Activity & Skills</h3>
-                                </div>
-
-                                <p className="text-muted text-[0.9rem] leading-relaxed mb-5">
-                                    Actively solving problems across multiple difficulty levels. Focused on building strong
-                                    foundations in data structures, algorithms, and problem-solving patterns essential for
-                                    DevOps automation scripting and system design.
+                            {/* ── Header ── */}
+                            <div className="text-center mb-8">
+                                <p className="text-cyan text-[0.8rem] tracking-[0.12em] uppercase font-bold mb-2">Competitive Programming</p>
+                                <h2 className="font-display text-[clamp(1.45rem,3vw,2.35rem)] font-extrabold leading-[1.2] mb-2 light:text-[#1a100b]">
+                                    <span className="text-[#FFA116]">300+</span> Problems Solved on{" "}
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFA116] to-[#ffbd7f]">LeetCode</span>
+                                </h2>
+                                <p className="text-muted text-[0.85rem] max-w-[500px] mx-auto">
+                                    Strong DSA foundations in C++. Completed curated study plans across all difficulty levels.
                                 </p>
+                            </div>
 
-                                {/* DSA Topic Badges */}
-                                <div className="mb-6">
-                                    <p className="text-[0.72rem] text-muted uppercase tracking-wider font-bold mb-2">Topics Practiced</p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {leetcodeBadges.map((badge) => (
-                                            <span
-                                                key={badge}
-                                                className="text-[0.75rem] px-3 py-1 rounded-full bg-[rgba(255,161,22,0.08)] text-[#FFA116] border border-[rgba(255,161,22,0.25)] font-semibold transition-all duration-200 hover:bg-[rgba(255,161,22,0.16)] hover:border-[rgba(255,161,22,0.5)] hover:shadow-[0_0_10px_rgba(255,161,22,0.15)] cursor-default"
-                                            >
-                                                {badge}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
+                            {/* ── Two-column: Leetcard + Details ── */}
+                            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6 items-start">
 
-                                {/* Difficulty breakdown bar */}
-                                <div className="mb-6">
-                                    <p className="text-[0.72rem] text-muted uppercase tracking-wider font-bold mb-2">Difficulty Mix</p>
-                                    <div className="flex items-center gap-3">
-                                        <div className="flex-1 flex h-2 rounded-full overflow-hidden gap-0.5">
-                                            <div className="bg-[#00b8a3] rounded-l-full" style={{ width: "45%" }} title="Easy" />
-                                            <div className="bg-[#FFA116]" style={{ width: "38%" }} title="Medium" />
-                                            <div className="bg-[#ef4743] rounded-r-full" style={{ width: "17%" }} title="Hard" />
-                                        </div>
-                                        <div className="flex items-center gap-3 text-[0.72rem] font-semibold flex-shrink-0">
-                                            <span className="text-[#00b8a3]">Easy</span>
-                                            <span className="text-[#FFA116]">Med</span>
-                                            <span className="text-[#ef4743]">Hard</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* CTA Buttons */}
-                                <div className="flex flex-wrap gap-3">
+                                {/* LEFT: Live Dashboard */}
+                                <div>
                                     <a
                                         href={LEETCODE_URL}
                                         target="_blank"
                                         rel="noreferrer noopener"
-                                        className="inline-flex items-center gap-2 no-underline rounded-full font-bold py-2.5 px-5 text-[0.85rem] transition-all duration-300 hover:-translate-y-0.5 bg-[#FFA116] text-[#1a1a1a] hover:bg-[#ffb733] hover:shadow-[0_6px_20px_rgba(255,161,22,0.4)]"
+                                        className="block transition-all duration-500 hover:scale-[1.015] hover:shadow-[0_8px_28px_rgba(255,161,22,0.18)] rounded-xl"
+                                        aria-label="LeetCode stats card"
                                     >
-                                        <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
-                                            <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.187.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.186c-.38-.375-.57-.5-.64-.61a2.067 2.067 0 0 1-.46-.955 2.26 2.26 0 0 1 .09-1.07 2.094 2.094 0 0 1 .491-.815l4.919-5.271 4.899-5.271a3.037 3.037 0 0 1 4.204-.077l.02.018 2.396 2.392a1.378 1.378 0 0 0 1.951-.003c.537-.54.537-1.414 0-1.955l-2.396-2.392c-1.087-1.087-2.574-1.643-4.105-1.56a5.323 5.323 0 0 0-3.956 1.638zm-5.604 0a1.374 1.374 0 0 0-.96.438L.516 6.672a1.378 1.378 0 0 0 .003 1.955 1.378 1.378 0 0 0 1.951.003L8.873 2.39a1.38 1.38 0 0 0 0-1.952A1.374 1.374 0 0 0 7.879 0z" />
-                                        </svg>
-                                        View Profile
+                                        <img
+                                            className="w-full h-auto rounded-xl shadow-lg border border-[rgba(255,161,22,0.18)]"
+                                            src={`https://leetcard.jacoblin.cool/${LEETCODE_USERNAME}?theme=dark&font=Manrope&ext=contest`}
+                                            alt={`LeetCode stats for ${LEETCODE_USERNAME}`}
+                                            loading="lazy"
+                                        />
                                     </a>
-                                    <a
-                                        href={`https://leetcode.com/${LEETCODE_USERNAME}/`}
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                        className="inline-flex items-center gap-2 no-underline rounded-full font-bold py-2.5 px-5 text-[0.85rem] border border-[rgba(255,161,22,0.35)] text-[#FFA116] bg-[rgba(255,161,22,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,161,22,0.14)] hover:border-[rgba(255,161,22,0.6)] hover:shadow-[0_4px_16px_rgba(255,161,22,0.2)]"
-                                    >
-                                        <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
-                                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
-                                        </svg>
-                                        Solve Along
-                                    </a>
+                                    <p className="text-center text-[0.65rem] text-muted flex items-center justify-center gap-1.5 mt-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse" />
+                                        Live stats &middot; auto-updates &middot; <span className="text-cyan font-semibold">@{LEETCODE_USERNAME}</span>
+                                    </p>
                                 </div>
-                            </div>
 
-                            {/* Right: Stats Card */}
-                            <a
-                                href={LEETCODE_URL}
-                                target="_blank"
-                                rel="noreferrer noopener"
-                                className="block w-full lg:w-auto lg:flex-shrink-0 lg:max-w-[380px] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_8px_32px_rgba(255,161,22,0.2)]"
-                                aria-label="LeetCode stats card"
-                            >
-                                <img
-                                    className="w-full h-auto rounded-xl shadow-lg border border-[rgba(255,161,22,0.15)]"
-                                    src={`https://leetcard.jacoblin.cool/${LEETCODE_USERNAME}?theme=dark&font=Manrope&ext=contest`}
-                                    alt={`LeetCode stats for ${LEETCODE_USERNAME}`}
-                                    loading="lazy"
-                                />
-                                <p className="text-center text-[0.72rem] text-muted mt-2">
-                                    Live stats via leetcard.jacoblin.cool
-                                </p>
-                            </a>
+                                {/* RIGHT: Achievements + Topics + CTAs */}
+                                <div className="flex flex-col gap-5">
+
+                                    {/* Achievements */}
+                                    <div>
+                                        <p className="text-[0.72rem] text-muted uppercase tracking-wider font-bold mb-3">Achievements & Badges</p>
+                                        <div className="flex flex-col gap-2.5">
+                                            <div className="flex items-center gap-3 p-3 rounded-xl border border-[rgba(255,161,22,0.2)] bg-[rgba(255,161,22,0.04)] hover:border-[rgba(255,161,22,0.4)] transition-all duration-300">
+                                                <div className="w-9 h-9 rounded-lg bg-[rgba(255,161,22,0.15)] flex items-center justify-center flex-shrink-0">
+                                                    <svg viewBox="0 0 24 24" className="w-4 h-4" fill="#FFA116"><path d="M12 23a7.5 7.5 0 0 1-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 3-2.5.5 1 .5 2 .5 3.5a7.5 7.5 0 0 1-5.5 7z"/></svg>
+                                                </div>
+                                                <div className="min-w-0 flex-1">
+                                                    <p className="text-[0.8rem] font-bold text-[#FFA116] leading-tight">50 Days Badge 2025</p>
+                                                    <span className="inline-flex items-center gap-1 text-[0.6rem] text-[#22c55e] font-bold uppercase"><span className="w-1 h-1 rounded-full bg-[#22c55e] animate-pulse" />Active</span>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-3 p-3 rounded-xl border border-[rgba(129,140,248,0.2)] bg-[rgba(129,140,248,0.04)] hover:border-[rgba(129,140,248,0.4)] transition-all duration-300">
+                                                <div className="w-9 h-9 rounded-lg bg-[rgba(129,140,248,0.15)] flex items-center justify-center flex-shrink-0">
+                                                    <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="#818cf8" strokeWidth="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+                                                </div>
+                                                <div className="min-w-0 flex-1">
+                                                    <p className="text-[0.8rem] font-bold text-[#818cf8] leading-tight">Top SQL 50</p>
+                                                    <p className="text-[0.6rem] text-muted">Completed &middot; 13 Feb 2026</p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-3 p-3 rounded-xl border border-[rgba(0,212,255,0.2)] bg-[rgba(0,212,255,0.04)] hover:border-[rgba(0,212,255,0.4)] transition-all duration-300">
+                                                <div className="w-9 h-9 rounded-lg bg-[rgba(0,212,255,0.12)] flex items-center justify-center flex-shrink-0">
+                                                    <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="var(--cyan)" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                                </div>
+                                                <div className="min-w-0 flex-1">
+                                                    <p className="text-[0.8rem] font-bold text-[var(--cyan)] leading-tight">Top Interview 150</p>
+                                                    <p className="text-[0.6rem] text-muted">Completed &middot; 06 Feb 2026</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* DSA Topics */}
+                                    <div>
+                                        <p className="text-[0.72rem] text-muted uppercase tracking-wider font-bold mb-2">DSA Topics Covered</p>
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {leetcodeBadges.map((badge) => (
+                                                <span key={badge} className="text-[0.68rem] px-2.5 py-0.5 rounded-full bg-[rgba(255,161,22,0.06)] text-[#FFA116] border border-[rgba(255,161,22,0.2)] font-semibold hover:bg-[rgba(255,161,22,0.14)] transition-all duration-200 cursor-default">
+                                                    {badge}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* CTA Buttons */}
+                                    <div className="flex flex-wrap gap-3 pt-1">
+                                        <a href={LEETCODE_URL} target="_blank" rel="noreferrer noopener"
+                                            className="inline-flex items-center gap-2 no-underline rounded-full font-bold py-2 px-5 text-[0.82rem] transition-all duration-300 hover:-translate-y-0.5 bg-[#FFA116] text-[#1a1a1a] hover:bg-[#ffb733] hover:shadow-[0_6px_20px_rgba(255,161,22,0.4)]">
+                                            <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor">
+                                                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.187.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.186c-.38-.375-.57-.5-.64-.61a2.067 2.067 0 0 1-.46-.955 2.26 2.26 0 0 1 .09-1.07 2.094 2.094 0 0 1 .491-.815l4.919-5.271 4.899-5.271a3.037 3.037 0 0 1 4.204-.077l.02.018 2.396 2.392a1.378 1.378 0 0 0 1.951-.003c.537-.54.537-1.414 0-1.955l-2.396-2.392A5.323 5.323 0 0 0 13.483 0z" />
+                                            </svg>
+                                            View Profile
+                                        </a>
+                                        <a href={`https://leetcode.com/${LEETCODE_USERNAME}/`} target="_blank" rel="noreferrer noopener"
+                                            className="inline-flex items-center gap-2 no-underline rounded-full font-bold py-2 px-5 text-[0.82rem] border border-[rgba(255,161,22,0.3)] text-[#FFA116] bg-[rgba(255,161,22,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,161,22,0.12)] hover:border-[rgba(255,161,22,0.55)]">
+                                            Solve Along
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>

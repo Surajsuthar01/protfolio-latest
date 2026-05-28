@@ -18,7 +18,7 @@ export const EMAIL = "surajsuthar0654@gmail.com";
 export const PHONE = "+91 6350692701";
 export const WHATSAPP_URL =
     "https://wa.me/6350692701?text=Hi%20Suraj%2C%20can%20we%20connect%20from%20your%20portfolio%3F";
-export const LOCATION = "Jaipur, Rajasthan, India";
+export const LOCATION = "Pune, Maharashtra, India";
 export const RESUME_PATH = "/Suraj FD2  .pdf";
 export const HERO_IMAGE_PATH = "/suraj-suthar-img.png";
 
@@ -42,16 +42,53 @@ export const roles: string[] = [
 
 export const leetcodeBadges: string[] = [
     "Arrays & Hashing",
-    "Binary Search",
-    "Dynamic Programming",
-    "Sliding Window",
     "Two Pointers",
+    "Sliding Window",
+    "Binary Search",
     "Stack & Queue",
+    "Linked Lists",
     "Trees & Graphs",
+    "Dynamic Programming",
     "Recursion & Backtracking",
+    "Sorting & Searching",
+    "Prefix Sum",
+    "Bit Manipulation",
 ];
 
 export const certifications: Certification[] = [
+    {
+        id: "infosys-ai-employability",
+        name: "Finishing School for Employability – Certificate of Recognition",
+        issuer: "Infosys Foundation & ICT Academy",
+        date: "08 December 2025 – 24 December 2025",
+        credentialId: "G-2025-GS065-0018",
+        featured: true,
+        category: "ai",
+        issuerLogo: "https://logo.clearbit.com/infosys.com",
+        details:
+            "Successfully completed the Certificate Course on Artificial Intelligence with Grade B under the Infosys Foundation Finishing School for Employability Program, held at Arya College of Engineering & Information Technology, Jaipur.",
+        fullDescription:
+            "This industry-recognised program by Infosys Foundation and ICT Academy focuses on building real-world employability skills alongside AI fundamentals. The intensive course covered practical AI applications, machine learning concepts, and industry-readiness skills. Conducted at Arya College of Engineering & IT, Jaipur, Rajasthan, from 08 to 24 December 2025. Issued under the authority of Capt. Shanthi S (Program Director, Infosys Foundation) and Srikanth V (CEO i/c, ICT Academy).",
+        objectives: [
+            "Understand core Artificial Intelligence concepts and applications",
+            "Apply machine learning fundamentals to real-world problems",
+            "Develop professional employability and industry-readiness skills",
+            "Work on collaborative AI-driven projects in a structured environment",
+            "Learn ethical AI practices and responsible technology use",
+            "Gain hands-on exposure to AI tools and frameworks",
+        ],
+        industryValue:
+            "Infosys Foundation certifications are highly regarded across the Indian IT industry. This AI-focused program, delivered in partnership with ICT Academy, demonstrates both technical AI proficiency and professional readiness — qualities sought by top-tier employers in software and data engineering roles.",
+        skills: [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Employability Skills",
+            "Professional Development",
+            "AI Applications",
+            "Problem Solving",
+        ],
+        verifyUrl: "https://verify.ictak.in",
+    },
     {
         id: "rhcsa",
         name: "Red Hat Certified System Administrator (RHCSA)",
@@ -327,10 +364,10 @@ export const educationTimeline: Education[] = [
         id: "btech",
         title: "Bachelor of Technology in Computer Science",
         institute: "Arya College of Engineering & IT",
-        period: "2022 - 2026",
-        score: "CGPA: 8.6",
-        location: "Jaipur, Rajasthan, India",
-        current: true,
+        period: "2022 – 2026 (Graduated)",
+        score: "CGPA: 8.8",
+        location: "Pune, Maharashtra, India",
+        current: false,
         details:
             "Pursuing B.Tech in Computer Science with a focus on software engineering, data structures, algorithms, and modern development practices.",
         tags: [

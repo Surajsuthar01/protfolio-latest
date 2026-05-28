@@ -23,7 +23,7 @@ export type Certification = {
     industryValue?: string;
     skills?: string[];
     verifyUrl?: string;
-    category?: "linux" | "cloud" | "devops" | "security" | "database" | "os";
+    category?: "linux" | "cloud" | "devops" | "security" | "database" | "os" | "ai";
     issuerLogo?: string;
     featured?: boolean;
 };
