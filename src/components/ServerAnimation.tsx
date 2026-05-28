@@ -28,13 +28,13 @@ const ServerAnimation = memo(function ServerAnimation({ width = 48, height = 24,
             <line x1="6" x2="6.01" y1="18" y2="18" />
 
             {/* Blinking Lights - Top Row (3) */}
-            <circle cx="14" cy="6" r="1.5" className="animate-pulse fill-green-400 stroke-none drop-shadow-[0_0_3px_rgba(74,222,128,0.9)]" style={{ animationDuration: '1.5s', animationDelay: d1 }} />
-            <circle cx="24" cy="6" r="1.5" className="animate-pulse fill-green-400 stroke-none drop-shadow-[0_0_3px_rgba(74,222,128,0.9)]" style={{ animationDuration: '1s', animationDelay: d2 }} />
-            <circle cx="34" cy="6" r="1.5" className="animate-pulse fill-green-400 stroke-none drop-shadow-[0_0_3px_rgba(74,222,128,0.9)]" style={{ animationDuration: '1.8s', animationDelay: d5 }} />
+            <circle cx="14" cy="6" r="1.5" className="animate-pulse fill-green-400 stroke-none" style={{ animationDuration: '1.5s', animationDelay: d1 }} />
+            <circle cx="24" cy="6" r="1.5" className="animate-pulse fill-green-400 stroke-none" style={{ animationDuration: '1s', animationDelay: d2 }} />
+            <circle cx="34" cy="6" r="1.5" className="animate-pulse fill-green-400 stroke-none" style={{ animationDuration: '1.8s', animationDelay: d5 }} />
 
             {/* Blinking Lights - Bottom Row (2) */}
-            <circle cx="19" cy="18" r="1.5" className="animate-pulse fill-green-400 stroke-none drop-shadow-[0_0_3px_rgba(74,222,128,0.9)]" style={{ animationDuration: '1.2s', animationDelay: d3 }} />
-            <circle cx="29" cy="18" r="1.5" className="animate-pulse fill-orange-400 stroke-none drop-shadow-[0_0_3px_rgba(251,146,60,0.9)]" style={{ animationDuration: '2s', animationDelay: d4 }} />
+            <circle cx="19" cy="18" r="1.5" className="animate-pulse fill-green-400 stroke-none" style={{ animationDuration: '1.2s', animationDelay: d3 }} />
+            <circle cx="29" cy="18" r="1.5" className="animate-pulse fill-orange-400 stroke-none" style={{ animationDuration: '2s', animationDelay: d4 }} />
         </svg>
     );
 });

@@ -122,7 +122,7 @@ const HomeSection = memo(function HomeSection({ roles, resumePath, heroImagePath
         <div className="flex justify-center relative z-[2] order-1 lg:order-2 mb-8 lg:mb-0 lg:mt-0">
           <div className="relative w-[min(500px,95vw)] group">
             <div
-              className="absolute inset-[-6%] rounded-full bg-[linear-gradient(160deg,rgba(255,205,153,0.38),rgba(255,174,100,0.16)),url('/profile-suraj2.png')] bg-cover bg-center blur-2xl saturate-110 opacity-55 scale-[1.03] pointer-events-none z-0 transition-all duration-500 ease-out
+              className="absolute inset-[-6%] rounded-full bg-[linear-gradient(160deg,rgba(255,205,153,0.38),rgba(255,174,100,0.16)),url('/profile-suraj2.png')] bg-cover bg-center blur-2xl saturate-110 opacity-55 scale-[1.03] pointer-events-none z-0 transition-[transform,box-shadow,border-color,opacity] duration-500 ease-out
               light:opacity-15 light:blur-3xl light:saturate-100 group-hover:opacity-75 group-hover:blur-3xl group-hover:saturate-[1.3] light:group-hover:opacity-70 light:group-hover:blur-[45px] light:group-hover:saturate-[1.4]"
               aria-hidden="true"
             />

@@ -94,7 +94,7 @@ function Home() {
             ═══════════════════════════════════════════════ */}
             <section id="leetcode" className="py-20 lg:py-24">
                 <div className="w-[min(1400px,88vw)] mx-auto">
-                    <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
+                    <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[6px]  overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
 
                         {/* Accent bar */}
                         <div className="h-[3px] w-full bg-[linear-gradient(90deg,#FFA116,#ffbd7f,#00b8a3,#FFA116)] opacity-70" />
@@ -122,7 +122,7 @@ function Home() {
                                         href={LEETCODE_URL}
                                         target="_blank"
                                         rel="noreferrer noopener"
-                                        className="block transition-all duration-500 hover:scale-[1.015] hover:shadow-[0_8px_28px_rgba(255,161,22,0.18)] rounded-xl"
+                                        className="block transition-[transform,box-shadow,border-color,opacity] duration-500 hover:scale-[1.015] hover:shadow-[0_8px_28px_rgba(255,161,22,0.18)] rounded-xl"
                                         aria-label="LeetCode stats card"
                                     >
                                         <img
@@ -145,7 +145,7 @@ function Home() {
                                     <div>
                                         <p className="text-[0.72rem] text-muted uppercase tracking-wider font-bold mb-3">Achievements & Badges</p>
                                         <div className="flex flex-col gap-2.5">
-                                            <div className="flex items-center gap-3 p-3 rounded-xl border border-[rgba(255,161,22,0.2)] bg-[rgba(255,161,22,0.04)] hover:border-[rgba(255,161,22,0.4)] transition-all duration-300">
+                                            <div className="flex items-center gap-3 p-3 rounded-xl border border-[rgba(255,161,22,0.2)] bg-[rgba(255,161,22,0.04)] hover:border-[rgba(255,161,22,0.4)] transition-[transform,box-shadow,border-color,background-color] duration-300">
                                                 <div className="w-9 h-9 rounded-lg bg-[rgba(255,161,22,0.15)] flex items-center justify-center flex-shrink-0">
                                                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="#FFA116"><path d="M12 23a7.5 7.5 0 0 1-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 3-2.5.5 1 .5 2 .5 3.5a7.5 7.5 0 0 1-5.5 7z"/></svg>
                                                 </div>
@@ -154,7 +154,7 @@ function Home() {
                                                     <span className="inline-flex items-center gap-1 text-[0.6rem] text-[#22c55e] font-bold uppercase"><span className="w-1 h-1 rounded-full bg-[#22c55e] animate-pulse" />Active</span>
                                                 </div>
                                             </div>
-                                            <div className="flex items-center gap-3 p-3 rounded-xl border border-[rgba(129,140,248,0.2)] bg-[rgba(129,140,248,0.04)] hover:border-[rgba(129,140,248,0.4)] transition-all duration-300">
+                                            <div className="flex items-center gap-3 p-3 rounded-xl border border-[rgba(129,140,248,0.2)] bg-[rgba(129,140,248,0.04)] hover:border-[rgba(129,140,248,0.4)] transition-[transform,box-shadow,border-color,background-color] duration-300">
                                                 <div className="w-9 h-9 rounded-lg bg-[rgba(129,140,248,0.15)] flex items-center justify-center flex-shrink-0">
                                                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="#818cf8" strokeWidth="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
                                                 </div>
@@ -163,7 +163,7 @@ function Home() {
                                                     <p className="text-[0.6rem] text-muted">Completed &middot; 13 Feb 2026</p>
                                                 </div>
                                             </div>
-                                            <div className="flex items-center gap-3 p-3 rounded-xl border border-[rgba(0,212,255,0.2)] bg-[rgba(0,212,255,0.04)] hover:border-[rgba(0,212,255,0.4)] transition-all duration-300">
+                                            <div className="flex items-center gap-3 p-3 rounded-xl border border-[rgba(0,212,255,0.2)] bg-[rgba(0,212,255,0.04)] hover:border-[rgba(0,212,255,0.4)] transition-[transform,box-shadow,border-color,background-color] duration-300">
                                                 <div className="w-9 h-9 rounded-lg bg-[rgba(0,212,255,0.12)] flex items-center justify-center flex-shrink-0">
                                                     <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="var(--cyan)" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                                                 </div>
@@ -180,7 +180,7 @@ function Home() {
                                         <p className="text-[0.72rem] text-muted uppercase tracking-wider font-bold mb-2">DSA Topics Covered</p>
                                         <div className="flex flex-wrap gap-1.5">
                                             {leetcodeBadges.map((badge) => (
-                                                <span key={badge} className="text-[0.68rem] px-2.5 py-0.5 rounded-full bg-[rgba(255,161,22,0.06)] text-[#FFA116] border border-[rgba(255,161,22,0.2)] font-semibold hover:bg-[rgba(255,161,22,0.14)] transition-all duration-200 cursor-default">
+                                                <span key={badge} className="text-[0.68rem] px-2.5 py-0.5 rounded-full bg-[rgba(255,161,22,0.06)] text-[#FFA116] border border-[rgba(255,161,22,0.2)] font-semibold hover:bg-[rgba(255,161,22,0.14)] transition-[transform,background-color,border-color] duration-200 cursor-default">
                                                     {badge}
                                                 </span>
                                             ))}
@@ -190,14 +190,14 @@ function Home() {
                                     {/* CTA Buttons */}
                                     <div className="flex flex-wrap gap-3 pt-1">
                                         <a href={LEETCODE_URL} target="_blank" rel="noreferrer noopener"
-                                            className="inline-flex items-center gap-2 no-underline rounded-full font-bold py-2 px-5 text-[0.82rem] transition-all duration-300 hover:-translate-y-0.5 bg-[#FFA116] text-[#1a1a1a] hover:bg-[#ffb733] hover:shadow-[0_6px_20px_rgba(255,161,22,0.4)]">
+                                            className="inline-flex items-center gap-2 no-underline rounded-full font-bold py-2 px-5 text-[0.82rem] transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-0.5 bg-[#FFA116] text-[#1a1a1a] hover:bg-[#ffb733] hover:shadow-[0_6px_20px_rgba(255,161,22,0.4)]">
                                             <svg viewBox="0 0 24 24" className="w-3.5 h-3.5" fill="currentColor">
                                                 <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.187.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.186c-.38-.375-.57-.5-.64-.61a2.067 2.067 0 0 1-.46-.955 2.26 2.26 0 0 1 .09-1.07 2.094 2.094 0 0 1 .491-.815l4.919-5.271 4.899-5.271a3.037 3.037 0 0 1 4.204-.077l.02.018 2.396 2.392a1.378 1.378 0 0 0 1.951-.003c.537-.54.537-1.414 0-1.955l-2.396-2.392A5.323 5.323 0 0 0 13.483 0z" />
                                             </svg>
                                             View Profile
                                         </a>
                                         <a href={`https://leetcode.com/${LEETCODE_USERNAME}/`} target="_blank" rel="noreferrer noopener"
-                                            className="inline-flex items-center gap-2 no-underline rounded-full font-bold py-2 px-5 text-[0.82rem] border border-[rgba(255,161,22,0.3)] text-[#FFA116] bg-[rgba(255,161,22,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,161,22,0.12)] hover:border-[rgba(255,161,22,0.55)]">
+                                            className="inline-flex items-center gap-2 no-underline rounded-full font-bold py-2 px-5 text-[0.82rem] border border-[rgba(255,161,22,0.3)] text-[#FFA116] bg-[rgba(255,161,22,0.05)] transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-0.5 hover:bg-[rgba(255,161,22,0.12)] hover:border-[rgba(255,161,22,0.55)]">
                                             Solve Along
                                         </a>
                                     </div>
@@ -214,7 +214,7 @@ function Home() {
             ═══════════════════════════════════════════════ */}
             <section id="repos" className="py-20 lg:py-24">
                 <div className="w-[min(1400px,88vw)] mx-auto">
-                    <div className="p-8 md:p-12 rounded-[1.5rem] w-full flex flex-col items-center relative border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
+                    <div className="p-8 md:p-12 rounded-[1.5rem] w-full flex flex-col items-center relative border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[6px]  overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
 
                         {/* Gradient accent border – Projects/GitHub theme */}
                         <div className="absolute top-0 left-0 right-0 h-[3px] bg-[linear-gradient(90deg,var(--cyan),#818cf8,#ffbd7f,var(--cyan))] opacity-75 pointer-events-none" />
@@ -244,7 +244,7 @@ function Home() {
                         {/* Cards Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                             {/* ── MERN Notes App ── */}
-                            <article className="group flex flex-col p-6 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[rgba(255,193,132,0.42)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.28)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))] light:hover:border-[#ffb74d] light:hover:shadow-[0_16px_32px_rgba(255,167,38,0.15)] overflow-hidden relative">
+                            <article className="group flex flex-col p-6 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm transition-[transform,box-shadow,border-color,opacity] duration-500 ease-out hover:-translate-y-1.5 hover:border-[rgba(255,193,132,0.42)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.28)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))] light:hover:border-[#ffb74d] light:hover:shadow-[0_16px_32px_rgba(255,167,38,0.15)] overflow-hidden relative">
                                 <div className="absolute -inset-[50%] bg-[radial-gradient(circle,rgba(255,196,132,0.12),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                                 {/* Header */}
@@ -302,7 +302,7 @@ function Home() {
                             </article>
 
                             {/* ── Suraj Logistic ── */}
-                            <article className="group flex flex-col p-6 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[rgba(255,193,132,0.42)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.28)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))] light:hover:border-[#ffb74d] light:hover:shadow-[0_16px_32px_rgba(255,167,38,0.15)] overflow-hidden relative">
+                            <article className="group flex flex-col p-6 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm transition-[transform,box-shadow,border-color,opacity] duration-500 ease-out hover:-translate-y-1.5 hover:border-[rgba(255,193,132,0.42)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.28)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))] light:hover:border-[#ffb74d] light:hover:shadow-[0_16px_32px_rgba(255,167,38,0.15)] overflow-hidden relative">
                                 <div className="absolute -inset-[50%] bg-[radial-gradient(circle,rgba(255,196,132,0.12),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                                 <div className="flex items-start justify-between mb-4 relative z-10">
@@ -357,7 +357,7 @@ function Home() {
                             </article>
 
                             {/* ── Bash Scripting ── */}
-                            <article className="group flex flex-col p-6 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[rgba(255,193,132,0.42)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.28)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))] light:hover:border-[#ffb74d] light:hover:shadow-[0_16px_32px_rgba(255,167,38,0.15)] overflow-hidden relative">
+                            <article className="group flex flex-col p-6 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm transition-[transform,box-shadow,border-color,opacity] duration-500 ease-out hover:-translate-y-1.5 hover:border-[rgba(255,193,132,0.42)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.28)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))] light:hover:border-[#ffb74d] light:hover:shadow-[0_16px_32px_rgba(255,167,38,0.15)] overflow-hidden relative">
                                 <div className="absolute -inset-[50%] bg-[radial-gradient(circle,rgba(255,196,132,0.12),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                                 <div className="flex items-start justify-between mb-4 relative z-10">
@@ -420,7 +420,7 @@ function Home() {
             ═══════════════════════════════════════════════ */}
             <section id="contact" className="py-20 lg:py-24">
                 <div className="w-[min(1400px,88vw)] mx-auto">
-                    <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
+                    <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[6px]  overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
 
                         {/* Amber accent bar */}
                         <div className="h-[3px] w-full bg-[linear-gradient(90deg,var(--cyan),#ffbd7f,var(--cyan))] opacity-70" />
@@ -504,7 +504,7 @@ function Home() {
                                     href={WHATSAPP_URL}
                                     target="_blank"
                                     rel="noreferrer noopener"
-                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[rgba(37,211,102,0.4)] hover:bg-[rgba(37,211,102,0.06)] hover:shadow-[0_8px_24px_rgba(37,211,102,0.12)] light:bg-[rgba(255,255,255,0.6)]"
+                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-0.5 hover:border-[rgba(37,211,102,0.4)] hover:bg-[rgba(37,211,102,0.06)] hover:shadow-[0_8px_24px_rgba(37,211,102,0.12)] light:bg-[rgba(255,255,255,0.6)]"
                                 >
                                     <div className="w-11 h-11 rounded-xl bg-[#25D366] flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(37,211,102,0.3)] group-hover:shadow-[0_6px_20px_rgba(37,211,102,0.45)] transition-shadow">
                                         <svg viewBox="0 0 24 24" className="w-6 h-6" fill="white">
@@ -523,7 +523,7 @@ function Home() {
                                     href={LINKEDIN_URL}
                                     target="_blank"
                                     rel="noreferrer noopener"
-                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[rgba(10,102,194,0.4)] hover:bg-[rgba(10,102,194,0.06)] hover:shadow-[0_8px_24px_rgba(10,102,194,0.15)] light:bg-[rgba(255,255,255,0.6)]"
+                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-0.5 hover:border-[rgba(10,102,194,0.4)] hover:bg-[rgba(10,102,194,0.06)] hover:shadow-[0_8px_24px_rgba(10,102,194,0.15)] light:bg-[rgba(255,255,255,0.6)]"
                                 >
                                     <div className="w-11 h-11 rounded-xl bg-[#0A66C2] flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(10,102,194,0.3)] group-hover:shadow-[0_6px_20px_rgba(10,102,194,0.45)] transition-shadow">
                                         <svg viewBox="0 0 24 24" className="w-5 h-5" fill="white">
@@ -542,7 +542,7 @@ function Home() {
                                     href={GITHUB_URL}
                                     target="_blank"
                                     rel="noreferrer noopener"
-                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[rgba(255,255,255,0.25)] hover:bg-[rgba(255,255,255,0.06)] hover:shadow-[0_8px_24px_rgba(255,255,255,0.08)] light:bg-[rgba(255,255,255,0.6)] light:hover:border-[rgba(36,41,47,0.4)] light:hover:bg-[rgba(36,41,47,0.06)]"
+                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-0.5 hover:border-[rgba(255,255,255,0.25)] hover:bg-[rgba(255,255,255,0.06)] hover:shadow-[0_8px_24px_rgba(255,255,255,0.08)] light:bg-[rgba(255,255,255,0.6)] light:hover:border-[rgba(36,41,47,0.4)] light:hover:bg-[rgba(36,41,47,0.06)]"
                                 >
                                     <div className="w-11 h-11 rounded-xl bg-[#24292f] flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(0,0,0,0.3)] group-hover:shadow-[0_6px_20px_rgba(0,0,0,0.5)] transition-shadow">
                                         <svg viewBox="0 0 24 24" className="w-5 h-5" fill="white">
@@ -559,7 +559,7 @@ function Home() {
                                 {/* Email Me */}
                                 <a
                                     href={`mailto:${EMAIL}`}
-                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[rgba(255,189,127,0.4)] hover:bg-[rgba(255,189,127,0.06)] hover:shadow-[0_8px_24px_rgba(255,189,127,0.12)] light:bg-[rgba(255,255,255,0.6)]"
+                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-0.5 hover:border-[rgba(255,189,127,0.4)] hover:bg-[rgba(255,189,127,0.06)] hover:shadow-[0_8px_24px_rgba(255,189,127,0.12)] light:bg-[rgba(255,255,255,0.6)]"
                                 >
                                     <div className="w-11 h-11 rounded-xl bg-[linear-gradient(135deg,#ffbd7f,#ff8c00)] flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(255,140,0,0.3)] group-hover:shadow-[0_6px_20px_rgba(255,140,0,0.45)] transition-shadow">
                                         <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -578,7 +578,7 @@ function Home() {
                                 <a
                                     href={RESUME_PATH}
                                     download
-                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-[rgba(255,189,127,0.25)] bg-[rgba(255,189,127,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[rgba(255,189,127,0.5)] hover:bg-[rgba(255,189,127,0.12)] hover:shadow-[0_8px_24px_rgba(255,189,127,0.2)] light:bg-[rgba(255,240,220,0.7)]"
+                                    className="group flex items-center gap-4 p-4 rounded-2xl border border-[rgba(255,189,127,0.25)] bg-[rgba(255,189,127,0.06)] transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-0.5 hover:border-[rgba(255,189,127,0.5)] hover:bg-[rgba(255,189,127,0.12)] hover:shadow-[0_8px_24px_rgba(255,189,127,0.2)] light:bg-[rgba(255,240,220,0.7)]"
                                 >
                                     <div className="w-11 h-11 rounded-xl bg-[linear-gradient(135deg,#818cf8,#6366f1)] flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(99,102,241,0.3)] group-hover:shadow-[0_6px_20px_rgba(99,102,241,0.45)] transition-shadow">
                                         <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

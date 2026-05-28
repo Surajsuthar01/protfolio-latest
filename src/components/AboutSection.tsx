@@ -13,7 +13,7 @@ const AboutSection = memo(function AboutSection() {
       <div className="w-[min(1400px,88vw)] mx-auto">
 
         {/* Outer card */}
-        <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
+        <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[6px]  overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
 
           {/* Tri-colour accent bar */}
           <div className="h-[3px] w-full bg-[linear-gradient(90deg,var(--cyan),#818cf8,#ffbd7f,var(--cyan))] opacity-70" />
@@ -97,7 +97,7 @@ const AboutSection = memo(function AboutSection() {
                     { name: "Jenkins",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
                   ].map((tool) => (
                     <div key={tool.name} className="group flex flex-col items-center gap-1" title={tool.name}>
-                      <div className="w-9 h-9 rounded-lg border border-line bg-[rgba(255,255,255,0.04)] flex items-center justify-center hover:border-[rgba(129,140,248,0.4)] hover:bg-[rgba(129,140,248,0.06)] transition-all duration-200 hover:scale-110 hover:-translate-y-0.5 light:bg-[rgba(255,255,255,0.6)]">
+                      <div className="w-9 h-9 rounded-lg border border-line bg-[rgba(255,255,255,0.04)] flex items-center justify-center hover:border-[rgba(129,140,248,0.4)] hover:bg-[rgba(129,140,248,0.06)] transition-[transform,background-color,border-color] duration-200 hover:scale-110 hover:-translate-y-0.5 light:bg-[rgba(255,255,255,0.6)]">
                         <img src={tool.icon} alt={tool.name} className="w-5 h-5 object-contain" loading="lazy" />
                       </div>
                       <span className="text-[0.55rem] text-muted truncate w-full text-center">{tool.name}</span>
@@ -182,7 +182,7 @@ const AboutSection = memo(function AboutSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
                   {/* Full Stack */}
-                  <div className="group flex flex-col gap-3 p-5 rounded-2xl border border-line bg-[rgba(255,255,255,0.02)] hover:border-[rgba(129,140,248,0.4)] hover:bg-[rgba(129,140,248,0.04)] transition-all duration-300 light:bg-[rgba(255,255,255,0.5)]">
+                  <div className="group flex flex-col gap-3 p-5 rounded-2xl border border-line bg-[rgba(255,255,255,0.02)] hover:border-[rgba(129,140,248,0.4)] hover:bg-[rgba(129,140,248,0.04)] transition-[transform,box-shadow,border-color,background-color] duration-300 light:bg-[rgba(255,255,255,0.5)]">
                     <div className="w-10 h-10 rounded-xl bg-[rgba(129,140,248,0.1)] border border-[rgba(129,140,248,0.2)] flex items-center justify-center">
                       <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="#818cf8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="16 18 22 12 16 6" />
@@ -203,7 +203,7 @@ const AboutSection = memo(function AboutSection() {
                   </div>
 
                   {/* DevOps & Cloud */}
-                  <div className="group flex flex-col gap-3 p-5 rounded-2xl border border-line bg-[rgba(255,255,255,0.02)] hover:border-[rgba(255,189,127,0.4)] hover:bg-[rgba(255,189,127,0.04)] transition-all duration-300 light:bg-[rgba(255,255,255,0.5)]">
+                  <div className="group flex flex-col gap-3 p-5 rounded-2xl border border-line bg-[rgba(255,255,255,0.02)] hover:border-[rgba(255,189,127,0.4)] hover:bg-[rgba(255,189,127,0.04)] transition-[transform,box-shadow,border-color,background-color] duration-300 light:bg-[rgba(255,255,255,0.5)]">
                     <div className="w-10 h-10 rounded-xl bg-[rgba(255,153,0,0.1)] border border-[rgba(255,153,0,0.2)] flex items-center justify-center">
                       <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="#ffbd7f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
@@ -225,7 +225,7 @@ const AboutSection = memo(function AboutSection() {
                   </div>
 
                   {/* DSA & Problem Solving */}
-                  <div className="group flex flex-col gap-3 p-5 rounded-2xl border border-line bg-[rgba(255,255,255,0.02)] hover:border-[rgba(0,212,255,0.3)] hover:bg-[rgba(0,212,255,0.04)] transition-all duration-300 light:bg-[rgba(255,255,255,0.5)]">
+                  <div className="group flex flex-col gap-3 p-5 rounded-2xl border border-line bg-[rgba(255,255,255,0.02)] hover:border-[rgba(0,212,255,0.3)] hover:bg-[rgba(0,212,255,0.04)] transition-[transform,box-shadow,border-color,background-color] duration-300 light:bg-[rgba(255,255,255,0.5)]">
                     <div className="w-10 h-10 rounded-xl bg-[rgba(0,212,255,0.1)] border border-[rgba(0,212,255,0.2)] flex items-center justify-center">
                       <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="var(--cyan)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10" />

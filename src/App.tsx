@@ -33,11 +33,15 @@ function App() {
     };
 
     const animate = () => {
-      // Keep the light motion intentionally slower than cursor movement.
-      glowX += (pointerX - glowX) * 0.02;
-      glowY += (pointerY - glowY) * 0.02;
-      document.documentElement.style.setProperty("--cursor-x", `${glowX}px`);
-      document.documentElement.style.setProperty("--cursor-y", `${glowY}px`);
+      glowX += (pointerX - glowX) * 0.08;
+      glowY += (pointerY - glowY) * 0.08;
+      // Only update if moved enough (avoids constant repaints)
+      const dx = Math.abs(pointerX - glowX);
+      const dy = Math.abs(pointerY - glowY);
+      if (dx > 0.5 || dy > 0.5) {
+        document.documentElement.style.setProperty("--cursor-x", `${glowX}px`);
+        document.documentElement.style.setProperty("--cursor-y", `${glowY}px`);
+      }
       rafId = window.requestAnimationFrame(animate);
     };
 
@@ -53,8 +57,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="relative min-h-screen bg-bg text-text overflow-hidden selection:bg-cyan selection:text-bg font-sans transition-colors duration-300">
-        <div className="fixed top-[-100px] left-[-100px] w-[500px] h-[500px] rounded-full blur-[100px] opacity-[0.15] pointer-events-none z-0 bg-mint" />
-        <div className="fixed bottom-[10%] right-[-100px] w-[500px] h-[500px] rounded-full blur-[100px] opacity-[0.15] pointer-events-none z-0 bg-[#64b5f6]" />
+        <div className="fixed top-[-100px] left-[-100px] w-[350px] h-[350px] rounded-full blur-[80px] opacity-[0.12] pointer-events-none z-0 bg-mint will-change-transform" />
+        <div className="fixed bottom-[10%] right-[-100px] w-[350px] h-[350px] rounded-full blur-[80px] opacity-[0.12] pointer-events-none z-0 bg-[#64b5f6] will-change-transform" />
 
         {/* Cursor Glow - Implementation in index.css as it depends on CSS variables for position */}
         <div className="cursor-glow" aria-hidden="true" />

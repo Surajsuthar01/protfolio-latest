@@ -32,7 +32,7 @@ const CertificationsSection = memo(function CertificationsSection() {
     return (
         <section id="certifications" className="py-20 lg:py-24">
             <div className="w-[min(1400px,88vw)] mx-auto">
-                <div className="p-8 md:p-12 rounded-[1.5rem] w-full flex flex-col items-center relative border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
+                <div className="p-8 md:p-12 rounded-[1.5rem] w-full flex flex-col items-center relative border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[6px]  overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
 
                     {/* Gradient accent border bar – Certifications theme */}
                     <div className="absolute top-0 left-0 right-0 h-[3px] bg-[linear-gradient(90deg,#ef4444,#f97316,#ffbd7f,var(--cyan))] opacity-75 pointer-events-none" />
@@ -58,7 +58,7 @@ const CertificationsSection = memo(function CertificationsSection() {
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
-                                className={`px-4 py-1.5 rounded-full text-[0.82rem] font-semibold border transition-all duration-300 ${activeCategory === cat
+                                className={`px-4 py-1.5 rounded-full text-[0.82rem] font-semibold border transition-[transform,box-shadow,border-color,background-color] duration-300 ${activeCategory === cat
                                     ? "bg-[rgba(255,189,127,0.18)] border-[rgba(255,189,127,0.5)] text-cyan shadow-[0_0_12px_rgba(255,189,127,0.18)]"
                                     : "border-line bg-[rgba(255,255,255,0.03)] text-muted hover:border-[rgba(255,189,127,0.3)] hover:text-text"
                                     }`}
@@ -73,7 +73,7 @@ const CertificationsSection = memo(function CertificationsSection() {
                         {filtered.map((cert) => (
                             <article
                                 key={cert.id}
-                                className="relative flex flex-col items-center p-6 text-center transition-all duration-500 ease-out border border-line rounded-2xl bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl overflow-hidden hover:-translate-y-1 hover:border-[rgba(255,193,132,0.42)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.28)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))] light:hover:border-[#ffb74d] light:hover:shadow-[0_16px_32px_rgba(255,167,38,0.15)] group"
+                                className="relative flex flex-col items-center p-6 text-center transition-[transform,box-shadow,border-color,opacity] duration-500 ease-out border border-line rounded-2xl bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm overflow-hidden hover:-translate-y-1 hover:border-[rgba(255,193,132,0.42)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.28)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))] light:hover:border-[#ffb74d] light:hover:shadow-[0_16px_32px_rgba(255,167,38,0.15)] group"
                             >
                                 {/* Hover Glow Sweep — exactly like StackSection */}
                                 <div className="absolute -inset-[50%] bg-[radial-gradient(circle,rgba(255,196,132,0.22),transparent_50%)] opacity-0 -translate-x-[20%] group-hover:opacity-100 group-hover:translate-x-[20%] transition-all duration-1000 pointer-events-none light:bg-[radial-gradient(circle,#ffa726,transparent_55%)] light:opacity-10" />
@@ -178,7 +178,7 @@ const CertificationsSection = memo(function CertificationsSection() {
                                 {/* View Details CTA */}
                                 <Link
                                     to={`/certifications/${cert.id}`}
-                                    className="relative z-10 mt-auto inline-flex items-center gap-1.5 px-5 py-2 rounded-full font-bold text-[0.82rem] bg-[rgba(255,189,127,0.1)] border border-[rgba(255,189,127,0.25)] text-cyan transition-all duration-300 hover:bg-[rgba(255,189,127,0.2)] hover:border-[rgba(255,189,127,0.5)] hover:shadow-[0_4px_16px_rgba(255,189,127,0.2)] hover:gap-2.5 light:text-[#c0580a] light:bg-[rgba(255,160,100,0.1)] light:border-[rgba(255,160,100,0.25)] light:hover:bg-[rgba(255,160,100,0.2)]"
+                                    className="relative z-10 mt-auto inline-flex items-center gap-1.5 px-5 py-2 rounded-full font-bold text-[0.82rem] bg-[rgba(255,189,127,0.1)] border border-[rgba(255,189,127,0.25)] text-cyan transition-[transform,box-shadow,border-color,background-color] duration-300 hover:bg-[rgba(255,189,127,0.2)] hover:border-[rgba(255,189,127,0.5)] hover:shadow-[0_4px_16px_rgba(255,189,127,0.2)] hover:gap-2.5 light:text-[#c0580a] light:bg-[rgba(255,160,100,0.1)] light:border-[rgba(255,160,100,0.25)] light:hover:bg-[rgba(255,160,100,0.2)]"
                                 >
                                     View Details →
                                 </Link>
@@ -194,7 +194,7 @@ const CertificationsSection = memo(function CertificationsSection() {
                 {/* ────────────────────────────────────────────────────────── */}
                 {/* AWS Educate Badges — Separate Box */}
                 {/* ────────────────────────────────────────────────────────── */}
-                <div className="mt-8 rounded-[1.5rem] w-full border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden relative light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
+                <div className="mt-8 rounded-[1.5rem] w-full border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[6px]  overflow-hidden relative light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
 
                     {/* AWS orange accent line at top */}
                     <div className="h-[3px] w-full bg-[linear-gradient(90deg,#FF9900,#ffbd7f,#FF9900)] opacity-80" />
@@ -244,7 +244,7 @@ const CertificationsSection = memo(function CertificationsSection() {
                                     href={badge.badgeUrl ?? CREDLY_URL}
                                     target="_blank"
                                     rel="noreferrer noopener"
-                                    className="group flex flex-col items-center gap-3 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[rgba(255,153,0,0.4)] hover:bg-[rgba(255,153,0,0.06)] hover:shadow-[0_12px_32px_rgba(255,153,0,0.15)] text-center light:bg-[rgba(255,255,255,0.6)] light:hover:border-[rgba(255,153,0,0.4)] light:hover:bg-[rgba(255,248,235,0.8)]"
+                                    className="group flex flex-col items-center gap-3 p-4 rounded-2xl border border-line bg-[rgba(255,255,255,0.03)] transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-1.5 hover:border-[rgba(255,153,0,0.4)] hover:bg-[rgba(255,153,0,0.06)] hover:shadow-[0_12px_32px_rgba(255,153,0,0.15)] text-center light:bg-[rgba(255,255,255,0.6)] light:hover:border-[rgba(255,153,0,0.4)] light:hover:bg-[rgba(255,248,235,0.8)]"
                                     title={badge.name}
                                 >
                                     {/* Hexagonal badge container */}

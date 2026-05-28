@@ -27,7 +27,7 @@ function Navbar({
 
   return (
     <header className="fixed top-4 left-0 right-0 flex justify-center z-40 pointer-events-none">
-      <div className="pointer-events-auto w-[min(1240px,calc(100vw_-_1.5rem))] flex items-center justify-between gap-1.5 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-xl backdrop-saturate-[1.25] shadow-[0_18px_48px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.24)] p-2 px-2.5 relative light:shadow-[0_14px_36px_rgba(124,79,45,0.12),inset_0_1px_0_rgba(255,245,235,0.56)]">
+      <div className="pointer-events-auto w-[min(1240px,calc(100vw_-_1.5rem))] flex items-center justify-between gap-1.5 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-sm  shadow-[0_18px_48px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.24)] p-2 px-2.5 relative light:shadow-[0_14px_36px_rgba(124,79,45,0.12),inset_0_1px_0_rgba(255,245,235,0.56)]">
         {/* Glow effect for light mode */}
         <div className="absolute inset-[1px] rounded-full z-[-1] hidden light:block bg-gradient-to-br from-[rgba(244,211,173,0.16)] to-[rgba(241,193,110,0.12)] pointer-events-none" />
 

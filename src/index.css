@@ -51,28 +51,27 @@
         top: 0;
         left: 0;
         width: 40px;
-        /* Base size */
         height: 40px;
-        /* Base size */
         pointer-events: none;
         z-index: 9999;
         mix-blend-mode: screen;
-        transform: translate(calc(var(--cursor-x) - 50%), calc(var(--cursor-y) - 50%));
-        transition: width 0.3s, height 0.3s, opacity 0.3s;
+        transform: translate(calc(var(--cursor-x) - 50%), calc(var(--cursor-y) - 50%)) translateZ(0);
+        will-change: transform;
 
-        /* The glow effect */
+        /* The glow effect — smaller + less blur = faster */
         &::after {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
+            transform: translate(-50%, -50%) translateZ(0);
+            width: 250px;
+            height: 250px;
             background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
             border-radius: 50%;
-            filter: blur(40px);
+            filter: blur(25px);
             opacity: 0.6;
+            will-change: transform;
         }
     }
 

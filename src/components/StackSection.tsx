@@ -43,7 +43,7 @@ const StackSection = memo(function StackSection() {
       <div className="w-[min(1400px,88vw)] mx-auto">
 
         {/* Outer card */}
-        <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
+        <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[6px]  overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
 
           {/* Accent bar */}
           <div className="h-[3px] w-full bg-[linear-gradient(90deg,var(--cyan),#7B42BC,#FF9900,var(--cyan))] opacity-70" />
@@ -79,7 +79,7 @@ const StackSection = memo(function StackSection() {
                   return (
                     <div
                       key={tool.name}
-                      className="group relative flex flex-col items-center gap-3 p-5 rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(0,0,0,0.2)] overflow-hidden light:bg-[rgba(255,255,255,0.6)]"
+                      className="group relative flex flex-col items-center gap-3 p-5 rounded-2xl border transition-[transform,box-shadow,border-color,background-color] duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(0,0,0,0.2)] overflow-hidden light:bg-[rgba(255,255,255,0.6)]"
                       style={{ borderColor: m.border, background: m.bg }}
                     >
                       {/* Glow */}

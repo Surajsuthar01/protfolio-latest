@@ -20,7 +20,7 @@ function CertificateDetails() {
             <div className="min-h-screen pt-28 pb-12 px-4 flex items-center justify-center">
                 <SEOMeta title="Certificate Not Found | Suraj Suthar" />
                 <main className="text-center">
-                    <div className="p-8 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl">
+                    <div className="p-8 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm">
                         <h2 className="text-2xl font-bold mb-4">Certificate Not Found</h2>
                         <Link to="/" className="text-cyan font-bold hover:underline">← Back to Home</Link>
                     </div>
@@ -52,7 +52,7 @@ function CertificateDetails() {
                 </div>
 
                 {/* Hero Header */}
-                <div className="relative rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.5),rgba(255,255,255,0.04))] backdrop-blur-xl overflow-hidden p-8 md:p-12 mb-8 text-center light:bg-[linear-gradient(165deg,rgba(255,255,255,0.9),rgba(255,248,240,0.8))] light:border-[rgba(255,150,50,0.2)]">
+                <div className="relative rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.5),rgba(255,255,255,0.04))] backdrop-blur-sm overflow-hidden p-8 md:p-12 mb-8 text-center light:bg-[linear-gradient(165deg,rgba(255,255,255,0.9),rgba(255,248,240,0.8))] light:border-[rgba(255,150,50,0.2)]">
                     {/* Background glow */}
                     <div className="absolute -inset-[30%] bg-[radial-gradient(ellipse_at_center,rgba(255,189,127,0.15),transparent_60%)] pointer-events-none" />
 
@@ -121,7 +121,7 @@ function CertificateDetails() {
                     <div className="flex flex-col gap-6">
 
                         {/* Overview */}
-                        <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
+                        <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
                             <h3 className="text-base font-bold text-cyan mb-4 uppercase tracking-wider flex items-center gap-2 light:text-[#c0580a]">
                                 <span>📋</span> Overview
                             </h3>
@@ -133,7 +133,7 @@ function CertificateDetails() {
 
                         {/* Key Learning Objectives */}
                         {cert.objectives && cert.objectives.length > 0 && (
-                            <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
+                            <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
                                 <h3 className="text-base font-bold text-cyan mb-5 uppercase tracking-wider flex items-center gap-2 light:text-[#c0580a]">
                                     <span>🎯</span> Key Learning Objectives
                                 </h3>
@@ -152,7 +152,7 @@ function CertificateDetails() {
 
                         {/* Industry Value */}
                         {cert.industryValue && (
-                            <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
+                            <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
                                 <h3 className="text-base font-bold text-cyan mb-4 uppercase tracking-wider flex items-center gap-2 light:text-[#c0580a]">
                                     <span>🌐</span> Industry Value & Impact
                                 </h3>
@@ -166,7 +166,7 @@ function CertificateDetails() {
 
                         {/* Skills */}
                         {cert.skills && cert.skills.length > 0 && (
-                            <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
+                            <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
                                 <h3 className="text-base font-bold text-cyan mb-4 uppercase tracking-wider flex items-center gap-2 light:text-[#c0580a]">
                                     <span>⚙️</span> Core Skills
                                 </h3>
@@ -184,7 +184,7 @@ function CertificateDetails() {
                         )}
 
                         {/* Verify */}
-                        <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
+                        <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
                             <h3 className="text-base font-bold text-cyan mb-4 uppercase tracking-wider flex items-center gap-2 light:text-[#c0580a]">
                                 <span>🔍</span> Verify Certification
                             </h3>
@@ -205,7 +205,7 @@ function CertificateDetails() {
                         </div>
 
                         {/* LinkedIn Connect */}
-                        <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-xl light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
+                        <div className="p-7 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.34),rgba(255,255,255,0.05))] backdrop-blur-sm light:bg-[rgba(255,255,255,0.9)] light:border-[rgba(255,150,50,0.15)]">
                             <h3 className="text-base font-bold text-cyan mb-4 uppercase tracking-wider flex items-center gap-2 light:text-[#c0580a]">
                                 <span>🔗</span> View on LinkedIn
                             </h3>

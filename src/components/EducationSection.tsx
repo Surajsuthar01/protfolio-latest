@@ -128,7 +128,7 @@ const EducationSection = memo(function EducationSection() {
       <div className="w-[min(1400px,88vw)] mx-auto">
 
         {/* Outer card */}
-        <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[18px] backdrop-saturate-[1.2] overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
+        <div className="rounded-[1.5rem] border border-line bg-[linear-gradient(165deg,var(--glass-card),rgba(255,255,255,0.05))] backdrop-blur-[6px]  overflow-hidden light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.75))]">
 
           {/* Accent bar */}
           <div className="h-[3px] w-full bg-[linear-gradient(90deg,#818cf8,#ffbd7f,var(--cyan))] opacity-70" />
@@ -173,7 +173,7 @@ const EducationSection = memo(function EducationSection() {
                   return (
                     <article
                       key={item.id}
-                      className="group relative flex gap-6 p-7 md:p-8 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.32),rgba(255,255,255,0.03))] backdrop-blur-xl transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.25)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.7))]"
+                      className="group relative flex gap-6 p-7 md:p-8 rounded-2xl border border-line bg-[linear-gradient(165deg,rgba(38,28,20,0.32),rgba(255,255,255,0.03))] backdrop-blur-sm transition-[transform,box-shadow,border-color,opacity] duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.25)] light:bg-[linear-gradient(165deg,rgba(255,255,255,0.85),rgba(255,248,240,0.7))]"
                       style={{
                         borderColor: item.current ? "rgba(255,189,127,0.35)" : undefined,
                       }}
