@@ -148,30 +148,43 @@ const AboutSection = memo(function AboutSection() {
                 <div className="flex flex-col gap-3">
                   <p className="text-muted text-[0.94rem] leading-relaxed light:text-[#6b4c36]">
                     I'm <strong className="text-text light:text-[#1a100b]">Suraj Suthar</strong> — a{" "}
-                    <strong className="text-text light:text-[#1a100b]">B.Tech CS graduate (8.8 CGPA)</strong> from Pune
-                    who doesn't just write code — I architect, containerise, and automate the entire journey from{" "}
-                    <strong className="text-text light:text-[#1a100b]">git push to production</strong>. I work across
-                    the full spectrum of modern software engineering: frontend, backend, and infrastructure.
+                    <strong className="text-text light:text-[#1a100b]">Computer Science graduate</strong> and software engineer
+                    passionate about building reliable, scalable, and production-ready systems. I enjoy working across the entire
+                    software development lifecycle, from designing intuitive user interfaces and developing backend services to
+                    automating infrastructure and deployment pipelines.
                   </p>
                   <p className="text-muted text-[0.94rem] leading-relaxed light:text-[#6b4c36]">
-                    On the <strong className="text-text light:text-[#1a100b]">frontend</strong>, I build responsive,
-                    performant UIs with <strong className="text-text light:text-[#1a100b]">React &amp; TypeScript</strong>.
-                    On the <strong className="text-text light:text-[#1a100b]">backend</strong>, I design scalable REST
-                    APIs with <strong className="text-text light:text-[#1a100b]">Node.js, Express, MongoDB &amp; SQL</strong>.
-                    On the <strong className="text-text light:text-[#1a100b]">DevOps</strong> side, I deliver fault-tolerant
-                    infrastructure with <strong className="text-text light:text-[#1a100b]">Docker, Kubernetes, Jenkins CI/CD,
-                    Terraform IaC, and AWS</strong> — all backed by an industry-recognised{" "}
+                    My technical expertise spans{" "}
+                    <strong className="text-text light:text-[#1a100b]">Frontend, Backend, DevOps, and Cloud Engineering</strong>.
+                    I build modern web applications using{" "}
+                    <strong className="text-text light:text-[#1a100b]">React, TypeScript, Node.js, Express, MongoDB, and SQL</strong>,
+                    while designing cloud-native infrastructure with{" "}
+                    <strong className="text-text light:text-[#1a100b]">Docker, Kubernetes, Jenkins, Terraform, Linux, and AWS</strong>.
+                    As an{" "}
                     <strong className="text-transparent bg-clip-text bg-gradient-to-r from-[#ef4444] to-[#f97316]">
-                      RHCSA certification
-                    </strong>.
+                      RHCSA-certified Linux Administrator
+                    </strong>, I focus on automation, Infrastructure as Code, CI/CD, and building resilient production environments.
                   </p>
                   <p className="text-muted text-[0.94rem] leading-relaxed light:text-[#6b4c36]">
-                    I've solved{" "}
+                    Beyond application development, I have hands-on experience with{" "}
+                    <strong className="text-text light:text-[#1a100b]">production support, infrastructure monitoring,
+                    ClickHouse, Grafana dashboards, Python automation, and system performance analysis</strong>,
+                    where I work on automating operational workflows and building monitoring solutions for real-world systems.
+                  </p>
+                  <p className="text-muted text-[0.94rem] leading-relaxed light:text-[#6b4c36]">
+                    Problem solving is a core part of my engineering mindset. Having solved{" "}
                     <strong className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--cyan)] to-[#818cf8]">
                       300+ LeetCode problems in C++
-                    </strong>{" "}
-                    — a daily habit that sharpens the algorithmic thinking and system-design instincts I bring to every
-                    engineering challenge. Strong in DSA, data structures, and optimising for scale.
+                    </strong>, I continuously strengthen my understanding of{" "}
+                    <strong className="text-text light:text-[#1a100b]">Data Structures, Algorithms, system design,
+                    and performance optimization</strong>, enabling me to build software that is not only functional
+                    but also efficient and scalable.
+                  </p>
+                  <p className="text-muted text-[0.94rem] leading-relaxed light:text-[#6b4c36]">
+                    I believe great software is more than writing code — it's about designing systems that are{" "}
+                    <strong className="text-text light:text-[#1a100b]">maintainable, automated, observable, and built
+                    to perform reliably in production</strong>. Every project I build is an opportunity to create
+                    solutions that are clean, efficient, and engineered for scale.
                   </p>
                 </div>
               </div>
